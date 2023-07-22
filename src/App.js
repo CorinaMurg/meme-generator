@@ -7,6 +7,7 @@ export default function App() {
     return (
         <div>
             <Header />
+            <p class="slogan">Add your lines and generate some fun!</p>
             <Meme />
         </div>
     )

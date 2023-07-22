@@ -2,62 +2,82 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Karla", sans-serif;
-    margin-top: 20px;
-    width: 40%;
-    margin-inline: auto;
+:root {
+    --clr-dark: #0f0d0e; 
+    --clr-red: #cc0000;
 }
 
-main {
-    padding: 36px;
+body {
+    font-family: "Karla", sans-serif;
+    margin-top: 1.5rem;
+    width: 30rem;
+    margin-inline: auto;
+    padding: 1rem;
+    background-color: var(--clr-dark);
+}
+
+#root {
+    background-color: white;
+    border: 2px solid var(--clr-dark);
+    padding: 1rem;
+    border-radius: 5px;
 }
 
 .header {
     display: flex;
     align-items: center;
-    height: 65px;
-    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    height: 4rem;
+    background: linear-gradient(90deg, #0F9ACB 1.18%, #12B5E5 100%);
     color: white;
-    padding: 20px;
-    margin-inline: 36px;
+    padding: 1.3rem;
+    border-radius: 3px;
 }
 
-.header--image {
-    height: 100%;
-    margin-right: 6px;
+.header--emoji {
+    /* height: 100%; */
+    margin-right: 0.5rem;
 }
 
 .header--title {
     font-size: 1.25rem;
     margin-right: auto;
+    margin-left: 0.5rem;
 }
 
-.header--project {
-    font-size: 0.75rem;
-    font-weight: 500;
+.slogan {
+    font-size: 1.3rem;
+    color: var(--clr-red);
+    font-weight: 700;
+    margin-inline: auto;
+    text-align: center;
 }
 
 .form {
     display: grid;
-    grid-template: 40px 40px / 1fr 1fr;
-    gap: 17px;
-    margin-bottom: 17px;
+    grid-template: 2.5rem 2.5rem / 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .form--input {
     font-family: "Karla", sans-serif;
     border-radius: 5px;
-    border: 1px solid #D5D4D8;
+    border: 1.5px solid #D5D4D8;
     text-indent: 5px;
+}
+
+.form--input:focus,
+.form--button:focus {
+    outline: 2px solid var(--clr-dark);  
 }
 
 .form--button {
     grid-column: 1 / -1;
     font-family: "Karla", sans-serif;
-    border-radius: 5px;
-    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
-    color: white;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #0F9ACB 1.14%, #12B5E5 100%);
+    color: var(--clr-dark);
+    font-size: 1.1rem;
     border: none;
     cursor: pointer;
 }
@@ -77,8 +97,8 @@ main {
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
-    margin: 15px 0;
-    padding: 0 5px;
+    margin: 1rem 0;
+    padding: 0 0.3rem;
     font-family: impact, sans-serif;
     font-size: 2em;
     text-transform: uppercase;
