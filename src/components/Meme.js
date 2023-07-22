@@ -1,33 +1,25 @@
 
-import React from "react"
+import {React, useEffect, useRef, useState} from "react"
 
 export default function Meme() {
 
-    const [meme, setMeme] = React.useState({
+    const firstFocusRef = useRef(null)
+
+    const [meme, setMeme] = useState({
         topText: "",
         bottomText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
 
-    const [allMemes, setAllMemes] = React.useState([])
-
-    /**
-    useEffect takes a function as its parameter. If that function
-    returns something, it needs to be a cleanup function. Otherwise,
-    it should return nothing. If we make it an async function, it
-    automatically retuns a promise instead of a function or nothing.
-    Therefore, if you want to use async operations inside of useEffect,
-    you need to define the function separately inside of the callback
-    function, as seen below:
-    */
+    const [allMemes, setAllMemes] = useState([])
    
-    React.useEffect(() => {
+    useEffect(() => {
         fetch("https://api.imgflip.com/get_memes")
             .then(res => res.json())
             .then(data => setAllMemes(data.data.memes))
     }, [])
 
-    // React.useEffect(() => {
+    // useEffect(() => {
     //     async function getMemes() {
     //         const res = await fetch("https://api.imgflip.com/get_memes")
     //         const data = await res.json()
@@ -39,18 +31,13 @@ export default function Meme() {
     function getMemeImage() {
         const randomNumber = Math.floor(Math.random() * allMemes.length)
         const url = allMemes[randomNumber].url
-        setMeme(prevMeme => ({
-            ...prevMeme,
-            randomImage: url
-        }))
+        setMeme(prevMeme => ({...prevMeme, randomImage: url}))
+        firstFocusRef.current.focus();
     }
     
     function handleChange(event) {
         const {name, value} = event.target
-        setMeme(prevMeme => ({
-            ...prevMeme,
-            [name]: value
-        }))
+        setMeme(prevMeme => ({...prevMeme, [name]: value}))
     }
     
     return (
@@ -63,6 +50,8 @@ export default function Meme() {
                     name="topText"
                     value={meme.topText}
                     onChange={handleChange}
+                    tabIndex={0}
+                    ref={firstFocusRef}
                 />
                 <input 
                     type="text"
