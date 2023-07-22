@@ -5,6 +5,7 @@
 :root {
     --clr-dark: #0f0d0e; 
     --clr-red: #cc0000;
+    --clr-white: #ffffff;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
     width: 30rem;
     margin-inline: auto;
     padding: 1rem;
-    background-color: var(--clr-dark);
+    background-color: var(--clr-white);
 }
 
 #root {
