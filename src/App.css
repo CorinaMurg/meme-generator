@@ -29,12 +29,11 @@ body {
     height: 4rem;
     background: linear-gradient(90deg, #0F9ACB 1.18%, #12B5E5 100%);
     color: white;
-    padding: 1.3rem;
+    padding: 0.8rem;
     border-radius: 3px;
 }
 
 .header--emoji {
-    /* height: 100%; */
     margin-right: 0.5rem;
 }
 
