@@ -1,19 +1,25 @@
+# Meme Generator
 
-This Meme Generator is a fun, interactive web application built with React. It allows users to create memes by overlaying text on a choice of images sourced from the Imgflip API.
+This was a fun app to build in React! 
+<br>It allows users to create memes by overlaying text on a choice of images sourced from the Imgflip API.
+<br>
+<br>Please visit the live site for [Meme Generator](https://corina-react-meme-generator.netlify.app/) and create your own meme!
+<br>
 
-I build this React project as part of scrimba.com's course "Learn React."
+<img width="360" alt="Toy Story characters Woody and Buzz. The top caption is Woody, look the weekend. The bottom caption is where" src="https://github.com/CorinaMurg/meme-generator/assets/115652409/1ed51500-7810-44ca-9d96-d66d1744245d">
+<br>
 
-This was my first React project using 
+## Key technical aspects 
+The Meme Generator was my first React project using 
 - event listeners
 - state
 - conditional rendering
 - forms
 - side effects
 
+Here's a breakdown of my approach:
 
-Here are the key technical aspects of the application:
-
-1. **React Components**: I built using functional components. I used components like `Header`, `Meme` to structure the app, and hooks to manage the state and side effects within these components.
+1. **React Components**: I built it using functional components. I used components like `Header`, `Meme` to structure the app, and hooks to manage the state and side effects within these components.
 
 2. **State Management**: I used the `useState` hook for managing state within the `Meme` component. It holds the state for the top and bottom texts typed by the user, as well as the URL of the randomly selected image.
 
@@ -30,8 +36,6 @@ Here are the key technical aspects of the application:
 8. **BEM Naming Convention**: In order to create a more maintainable code, I used the Block Element Modifier (BEM) methodology for CSS class naming. For example, in the class name 'form--input', 'form' is the Block, and 'input' is the Element. I find that BEM naming makes the relationship between the HTML and CSS clear and consistent, and it helps me in both development and debugging processes. 
 
 
-GitHub repo: https://github.com/Cor-Ina/react-meme-generator
 
-Live site: https://corina-react-meme-generator.netlify.app/
 
 
